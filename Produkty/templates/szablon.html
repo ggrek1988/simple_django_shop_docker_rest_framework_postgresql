@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Sklep</title>
+    <div>
+        <h1>LOGO SKLEPU          wyszukiwarka       wyloguj</h1>
+    </div>
+    <div style="clear:both"></div>
+    <div style="width:200px; float:left">
+
+        <h1>MENU</h1>
     {% for kat in kategoria_v1 %}
 
     <p><a href="../kategoria/{{ kat.id }}">{{kat.nazwa}}</a></p>
 
     {% endfor %}
+    </div>
+    <div style="width:700px; float:right ">
 
+       {% block produkt %} {% endblock produkt %}
+        </div>
+    <div style="clear:both"></div>
 </head>
 <body>
 

@@ -19,10 +19,10 @@ from django.urls import path
 from Produkty.views import *
 
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index_f),
     path('kategoria/<id>', kategoria_f, name='kategoria'),  # <id> przekierowuje się do funckji
     # kategoria_f(request,id) w pliku views.py
     path('produkt/<id>', produkt_f, name='produkt'),
-}
+]
