@@ -1,0 +1,13 @@
+budowanie projektu
+django-admin startproject Django_sklep
+
+budowanie kategorii
+python manage.py startapp Produkty
+
+zaakceptowanie modelu w pliku models.py
+#python manage.py makemigrations
+#python manage.py migrate
+
+
+uruchomienie serwera:
+python manage.py runserver
