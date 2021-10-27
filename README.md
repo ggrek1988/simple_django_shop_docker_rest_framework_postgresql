@@ -1,22 +1,23 @@
-budowanie projektu
+
+#uruchomienie serwera:
+python manage.py runserver
+
+#budowanie projektu
 django-admin startproject Django_sklep
 
-budowanie kategorii
+#budowanie kategorii
 python manage.py startapp Produkty
 
-zaakceptowanie modelu w pliku models.py
-#python manage.py makemigrations
-#python manage.py migrate
-
-
-uruchomienie serwera:
-python manage.py runserver
+#zaakceptowanie modelu w pliku models.py
+python manage.py makemigrations
+python manage.py migrate
 
 
 pip freeze # listuje wszystkie pakiety potrzebne do uruchomienia projektu
 ################################################################################
-#uruchomienie dokera
 
+
+#uruchomienie dokera
 docker-compose up
 
 #DEV
