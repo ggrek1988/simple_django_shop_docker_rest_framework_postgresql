@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.shortcuts import render #funckja odpowiedzialna za wyswietlanie html
 from django.http import  HttpResponse
 from .models import *
+from rest_framework import  viewsets
+from .serializer import  KategoriaSerializer, ProduktySerializer
+
 
 def index_f(request):
     #zapytanie = Produkty.objects.all() #select * from Producty
@@ -35,3 +38,17 @@ def produkt_f(request,id):
     dane = {'produkt_user' : produkt_user , 'kategoria_v1' : kategoriav}
 
     return render(request,'produkt.html',dane)
+
+##############API######################API########################API#######################API#####
+
+class ProduktyViewSet(viewsets.ModelViewSet):
+    queryset = Produkty.objects.all()
+    serializer_class = ProduktySerializer
+
+class KategoriaViewSet(viewsets.ModelViewSet):
+    queryset = Kategoria.objects.all()
+    serializer_class = KategoriaSerializer
+
+class ProducentViewSet(viewsets.ModelViewSet):
+        queryset = Producent.objects.all()
+        serializer_class = KategoriaSerializer
