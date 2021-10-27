@@ -1,5 +1,5 @@
 /venv/
 .idea/
 **/__pycache__/
- main.spec
 /main.spec
+__pycache__/
