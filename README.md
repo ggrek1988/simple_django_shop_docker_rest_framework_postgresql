@@ -11,7 +11,7 @@
 
     python manage.py startapp Produkty
 
-#zaakceptowanie modelu w pliku models.py
+#zaakceptowanie/przebudowanie modelu w pliku models.py
 
     python manage.py makemigrations
     python manage.py migrate
@@ -20,12 +20,24 @@
 
     pip freeze 
 ################################################################################
+#1) Listing available containers 
+    docker ps
+#2) to enter container
+    
+    docker exec -it {id} bash
 
+#3) to rebuild container  
+    
+    docker-compose build {nazwa}
 
-#uruchomienie dokera
+#4)  start project containers
     
     docker-compose up
 
+       
+#tworzenie superusera
+    
+    python manage.py createsuperuser
 #DEV
 
     To enter container docker exec -it {id} bash
